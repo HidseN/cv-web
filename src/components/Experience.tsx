@@ -10,46 +10,36 @@ const Experience = () => {
       location: "Usora, Bosnia and Herzegovina",
       period: "2024 - Present",
       description: [
-        "Administer and manage Microsoft 365 (accounts, licensing, collaboration tools)",
-        "Configure and maintain Microsoft Intune/Entra for device management and compliance",
-        "Implement and monitor Windows Defender and endpoint security for proactive threat protection",
-        "Conduct threat analysis and respond to incidents to maintain system integrity",
-        "Manage Active Directory, Group Policy, and network access for secure IT operations",
-        "Collaborate with teams to drive digital transformation initiatives"
+        "Implemented Conditional Access and MFA across the enterprise M365 tenant, reducing account compromise incidents by ~35%",
+        "Deployed Intune device compliance policies, raising device compliance from ~56% to 90% within 5 months",
+        "Automated endpoint remediation using Microsoft Defender and PowerShell, cutting mean response time from hours to minutes",
+        "Aligned Microsoft 365 policies with GDPR and compliance requirements, contributing to successful audit readiness",
+        "Managed Active Directory, Group Policy, and secure network access to strengthen organizational security posture",
+        "Collaborated with teams to drive digital transformation initiatives and improve overall IT efficiency"
       ],
       technologies: [
         "Microsoft 365 / Exchange Online / SharePoint / Teams Administration",
         "Intune / Entra",
+        "Conditional Access & MFA",
         "Windows Defender",
         "Active Directory",
         "Network Security",
         "Firewall Management",
-        "Threat Analysis and Incident Response",
-        "DNS, DHCP, TCP/IP Networking",
+        "Threat Analysis",
+        "Incident Response",
+        "DNS, DHCP, TCP/IP"
       ]
     },
     {
-      title: "Postal Delivery Officer",
-      company: "Deutsche Post und DHL",
-      location: "Kaufbeuren, Bavaria, Germany",
-      period: "Jul 2024 – Oct 2024 · 4 mos",
+      title: "Delivery & Logistics Roles",
+      company: "DHL / Deutsche Post",
+      location: "Germany",
+      period: "Jul 2023 – Oct 2024",
       description: [
-        "Managed daily routes and schedules, maintaining organization under tight deadlines",
-        "Delivered letters and parcels reliably and on time",
-        "Provided customer service and handled inquiries professionally"
+        "Developed time management, reliability, and customer service skills",
+        "Supported operations in fast-paced environments"
       ],
       technologies: ["Time Management", "Reliability", "Communication"]
-    },
-    {
-      title: "Delivery Assistant",
-      company: "DHL",
-      location: "Cologne, North Rhine-Westphalia, Germany",
-      period: "Jul 2023 – Oct 2023 · 4 mos",
-      description: [
-        "Delivered packages efficiently and on schedule, ensuring high customer satisfaction",
-        "Assisted logistics coordination and supported operations in a fast-paced environment"
-      ],
-      technologies: ["Logistics Systems", "Teamwork", "Problem Solving"]
     }
   ];
 
@@ -61,8 +51,7 @@ const Experience = () => {
             Work <span className="text-primary">Experience</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A journey through my professional career, highlighting key achievements and 
-            the technologies I've mastered along the way.
+            A journey through my professional career, highlighting IT, Cloud, and Security achievements.
           </p>
         </div>
 

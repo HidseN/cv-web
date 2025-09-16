@@ -10,38 +10,55 @@ const Education = () => {
       location: "Sarajevo, BiH",
       period: "2020 - 2024",
       gpa: "3.1/4.0",
-      description: "Focused on software engineering, algorithms, and data structures. Graduated Magna Cum Laude.",
-      coursework: ["Data Structures", "Algorithms", "Software Engineering", "Database Systems", "Computer Networks", "Cybersecurity Essentials"],
+      description:
+        "Studied software engineering fundamentals, algorithms, and data structures, while gaining hands-on exposure to IT operations and development practices.",
+      coursework: [
+        "Data Structures & Algorithms",
+        "Software Engineering Principles",
+        "Database Fundamentals",
+        "Computer Networks",
+        "Introduction to Cybersecurity",
+        "Web Development Basics",
+      ],
     },
     {
       degree: "CCNA Networking Program: Introduction to Networks v7.0 (ITN)",
       institution: "Cisco Networking Academy",
       location: "Online",
       period: "2023",
-      description: "Fundamentals of networking including architecture, protocols, and models with focus on TCP/IP, Ethernet, and routing concepts.",
-      coursework: ["Networking Basics", "IPv4/IPv6 Addressing", "Ethernet Switching", "Routing Fundamentals", "Subnetting", "Network Protocols"],
+      description:
+        "Learned networking fundamentals including TCP/IP, Ethernet, subnetting, and routing concepts. Practiced configuring network devices and troubleshooting network issues.",
+      coursework: [
+        "Networking Basics",
+        "IPv4/IPv6 Addressing",
+        "Ethernet & Switching",
+        "Routing Fundamentals",
+        "Subnetting",
+        "Network Protocols Overview",
+      ],
     },
   ];
 
   const certifications = [
     { title: "Cybersecurity Essentials", issuer: "Cisco Networking Academy", date: "2023" },
     { title: "Linux Basics", issuer: "Cisco Networking Academy", date: "2023" },
-    { title: "GDPR & Compliance Training", issuer: "Refram Creative Solutions", date: "2025" },
+    { title: "GDPR & Compliance Awareness", issuer: "Refram Creative Solutions", date: "2025" },
   ];
 
-  const achievements = [
-    "Led and contributed to internal training sessions or knowledge-sharing workshops",
-    "Completed multiple online IT and web development certifications",
-    "Automated manual workflows to increase efficiency at work",
-    "Contributed to internal IT compliance audits, including GDPR and security policies",
-    "Received positive feedback from supervisors and colleagues for teamwork and problem-solving skills",
-    "Participated in IT service improvement initiatives to reduce downtime or improve workflows",
-    "Managed and implemented a Microsoft 365 citizen development project, creating training materials and tools to enhance digital literacy within the organization",
-  ];
+const achievements = [
+  "Participated in internal IT workshops, gaining hands-on experience with Microsoft 365 administration",
+  "Completed online courses in cybersecurity and networking to strengthen practical IT skills",
+  "Automated repetitive data-entry and reporting tasks, reducing manual work for the team",
+  "Assisted in implementing basic IT security and compliance measures within Microsoft 365",
+  "Collaborated on IT projects to improve workflow efficiency and support colleagues",
+  "Developed guides for Microsoft 365 tools, helping team members adopt new digital workflows",
+];
+
+
+
 
   return (
     <section id="education" className="py-24 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative overflow-hidden">
-      {/* Animated background shapes */}
       <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-glow/20 rounded-full blur-3xl animate-pulse-slow"></div>
       <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-slow"></div>
 
@@ -52,7 +69,7 @@ const Education = () => {
             Education & <span className="text-primary">Certifications</span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            My academic background and professional certifications that have shaped my technical expertise and problem-solving abilities.
+            Academic background and professional certifications reflecting hands-on IT skills, networking knowledge, and ongoing learning.
           </p>
         </div>
 
@@ -95,7 +112,11 @@ const Education = () => {
                   <h4 className="font-medium text-foreground mb-2">Key Coursework:</h4>
                   <div className="flex flex-wrap gap-2">
                     {edu.coursework.map((course, courseIndex) => (
-                      <Badge key={courseIndex} variant="secondary" className="bg-gradient-to-r from-primary/20 to-accent/20 text-primary">
+                      <Badge
+                        key={courseIndex}
+                        variant="secondary"
+                        className="bg-gradient-to-r from-primary/20 to-accent/20 text-primary"
+                      >
                         {course}
                       </Badge>
                     ))}

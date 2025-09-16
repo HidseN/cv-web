@@ -1,76 +1,86 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import { Code2, Database, Cloud, Palette, Settings, Globe } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Systems & Security",
-      icon: Code2,
-      skills: [
-        { name: "Windows Server", level: 88 },
-        { name: "Active Directory", level: 85 },
-        { name: "Network Security", level: 80 },
-        { name: "PowerShell", level: 75 },
-        { name: "Linux Administration", level: 70 },
-        { name: "VMware/Virtualization", level: 82 },
-      ],
-    },
-    {
-      title: "Development Skills",
-      icon: Database,
-      skills: [
-        { name: "JavaScript", level: 75 },
-        { name: "React", level: 70 },
-        { name: "Python", level: 68 },
-        { name: "HTML5 & CSS3", level: 80 },
-        { name: "Git/Version Control", level: 75 },
-        { name: "SQL Basics", level: 65 },
-      ],
-    },
-    {
-      title: "Cybersecurity Focus",
+      title: "Cloud & IT Security",
       icon: Cloud,
+      description:
+        "Practical experience securing Microsoft 365 and Azure environments, implementing Conditional Access, MFA, Intune compliance, and endpoint protection strategies.",
       skills: [
-        { name: "Vulnerability Assessment", level: 78 },
-        { name: "Incident Response", level: 72 },
-        { name: "Network Monitoring", level: 80 },
-        { name: "Malware Analysis", level: 65 },
-        { name: "Security Protocols", level: 75 },
-        { name: "Ethical Hacking", level: 60 },
+        "Microsoft 365 Security & Compliance",
+        "Azure AD / Entra ID (user & group management)",
+        "Conditional Access & Multi-Factor Authentication",
+        "Intune Device Compliance & Endpoint Management",
+        "Endpoint Protection & Threat Response (Microsoft Defender)",
+        "Network Security Fundamentals & Firewall Configurations",
+      ],
+    },
+    {
+      title: "Systems Administration",
+      icon: Code2,
+      description:
+        "Hands-on experience maintaining Windows Server environments, Active Directory, and core networking infrastructure, with practical automation for routine tasks.",
+      skills: [
+        "Windows Server & Active Directory management",
+        "DNS, DHCP, TCP/IP, VPN configuration",
+        "Fundamentals of Virtualization (VMware / Hyper-V)",
+        "PowerShell scripting for automation tasks",
+      ],
+    },
+    {
+      title: "Development & Scripting",
+      icon: Database,
+      description:
+        "Capable of scripting, basic web development, and simple database operations to support IT processes and automation.",
+      skills: [
+        "Python scripting for automation tasks",
+        "HTML & CSS for simple web interfaces",
+        "SQL queries for reporting and analysis",
+        "Git version control for project collaboration",
       ],
     },
   ];
 
   const additionalSkills = {
-    "IT Support & Tools": ["ServiceNow", "Office 365", "TCP/IP", "Router Configuration", "Data Recovery"],
-    "Learning & Development": ["Cybersecurity Courses", "Coding Bootcamps", "Self-Study", "Online Certifications", "Tech Meetups"],
-    "Soft Skills": ["Problem Solving", "Customer Service", "Technical Documentation", "Team Collaboration", "Continuous Learning"],
+    "IT Tools & Platforms": [
+      "Office 365 Administration",
+      "Tickit AI",
+      "VPN setup and troubleshooting",
+      "Data Recovery & Backup operations",
+      "Power Platform (Power Automate & Power Apps fundamentals)",
+    ],
+    "Continuous Learning & Development": [
+      "Microsoft Learn courses",
+      "Cybersecurity labs & hands-on exercises",
+      "HackTheBox & online security challenges",
+      "Self-study & industry certifications",
+    ],
+    "Professional Skills": [
+      "Problem Solving & Analytical Thinking",
+      "Team Collaboration & Knowledge Sharing",
+      "Technical Documentation",
+      "Time Management & Prioritization",
+      "Adaptability & Continuous Learning",
+    ],
   };
 
-  const getSkillColor = (level: number) => {
-    if (level >= 90) return "bg-gradient-to-r from-green-500 to-emerald-500";
-    if (level >= 80) return "bg-gradient-to-r from-blue-500 to-cyan-500";
-    if (level >= 70) return "bg-gradient-to-r from-yellow-500 to-orange-500";
-    return "bg-gradient-to-r from-gray-400 to-gray-600";
-  };
+  const icons = [Palette, Settings, Globe];
 
   return (
     <section id="skills" className="py-24 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative overflow-hidden">
-      {/* Animated background shapes */}
       <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-glow/20 rounded-full blur-3xl animate-pulse-slow"></div>
       <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse-slow"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Section title */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Skills & <span className="text-primary">Expertise</span>
           </h2>
           <p className="text-xl md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A comprehensive overview of my technical skills spanning IT operations, cybersecurity, and 
-            emerging software development capabilities.
+            An honest overview of my technical skills, highlighting practical experience in cloud security, systems administration, and scripting for automation.
           </p>
         </div>
 
@@ -89,21 +99,19 @@ const Skills = () => {
                   {category.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-foreground">{skill.name}</span>
-                      <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                    </div>
-                    <div className="relative h-2 rounded-full bg-gray-200 overflow-hidden">
-                      <div
-                        className={`absolute top-0 left-0 h-2 rounded-full ${getSkillColor(skill.level)} transition-all duration-1000`}
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
+              <CardContent>
+                <p className="text-muted-foreground mb-4">{category.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <Badge
+                      key={skillIndex}
+                      variant="secondary"
+                      className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors duration-300"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -112,9 +120,7 @@ const Skills = () => {
         {/* Additional skills */}
         <div className="grid md:grid-cols-3 gap-8">
           {Object.entries(additionalSkills).map(([category, skills], index) => {
-            const icons = [Palette, Settings, Globe];
             const Icon = icons[index];
-
             return (
               <Card
                 key={category}
@@ -147,7 +153,6 @@ const Skills = () => {
         </div>
       </div>
 
-      {/* Tailwind animations */}
       <style>
         {`
           @keyframes gradient-slow {

@@ -1,31 +1,31 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Lightbulb, Users, Target } from "lucide-react";
+import { Shield, Cloud, Terminal, Zap } from "lucide-react";
 
 const About = () => {
   const highlights = [
     {
-      icon: Code,
-      title: "Development Foundation",
+      icon: Shield,
+      title: "Cloud Security Focus",
       description:
-        "Growing expertise in modern development technologies including React, JavaScript, and Python with focus on secure coding practices.",
+        "Specializing in securing Microsoft 365 and Azure environments, with hands-on experience in identity protection, compliance policies, and Microsoft Defender.",
     },
     {
-      icon: Lightbulb,
-      title: "Security Mindset",
+      icon: Cloud,
+      title: "Modern IT Infrastructure",
       description:
-        "Deep interest in cybersecurity principles, threat analysis, and implementing security best practices in all projects.",
+        "Proven expertise in Microsoft Entra ID, Intune, Conditional Access, and automation for secure and scalable environments.",
     },
     {
-      icon: Users,
-      title: "IT Support Expert",
+      icon: Terminal,
+      title: "Automation & Scripting",
       description:
-        "Extensive experience in help desk support, user training, and troubleshooting complex technical issues.",
+        "Building security and administration tools with PowerShell, Graph API, and Terraform to streamline and harden operations.",
     },
     {
-      icon: Target,
-      title: "System Administration",
+      icon: Zap,
+      title: "Systems & Networking",
       description:
-        "Proven track record in maintaining IT infrastructure, network security, and ensuring system reliability.",
+        "Strong foundation in TCP/IP, DNS, DHCP, VPN, and endpoint management, ensuring reliable and secure infrastructure.",
     },
   ];
 
@@ -44,11 +44,13 @@ const About = () => {
             About <span className="text-primary">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-  I am an IT System Administrator experienced in Microsoft 365, Active Directory, Intune/Entra, Windows support, and ITIL. Skilled in user management, troubleshooting, and resolving technical issues, with a solid understanding of threat management and core networking concepts (TCP/IP, DNS, DHCP, VPN).  
-
-  With a BSc in Software Engineering and coursework in programming, databases, and cybersecurity, I am eager to grow in cybersecurity and remote IT roles, contributing to secure and efficient systems.
-</p>
-
+            I specialize in securing Microsoft 365 and Azure environments, with
+            hands-on experience in identity protection, Intune compliance, and
+            Microsoft Defender. By combining a background in software
+            engineering with IT administration, I design resilient, automated
+            security solutions that scale and align with modern cloud-first
+            strategies.
+          </p>
         </div>
 
         {/* Highlights */}
@@ -63,8 +65,12 @@ const About = () => {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-accent animate-gradient-slow blur-2xl opacity-50"></div>
                   <highlight.icon className="h-8 w-8 text-primary-foreground relative z-10" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">{highlight.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{highlight.description}</p>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  {highlight.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {highlight.description}
+                </p>
               </CardContent>
             </Card>
           ))}
@@ -74,21 +80,28 @@ const About = () => {
         <div className="mt-16 max-w-4xl mx-auto">
           <Card className="shadow-elegant bg-gradient-to-br from-primary/5 to-accent/5 transform hover:-translate-y-3 border-border/50 hover:shadow-glow transition-all duration-500">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">My Journey</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                My Journey
+              </h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  My journey in technology started with a fascination for how systems work and how they can be secured.
-                  Through my role in IT support and system administration, I've gained valuable insights into network
-                  security, user management, and infrastructure maintenance.
+                  My journey began with a passion for technology and a drive to
+                  understand how systems can be secured against modern threats.
+                  Over time, I built expertise in IT support and system
+                  administration, gaining first-hand experience with enterprise
+                  environments.
                 </p>
                 <p>
-                  Currently expanding my skills in software development while maintaining my focus on cybersecurity. My
-                  unique background in IT operations gives me a comprehensive understanding of both the development and
-                  operational aspects of technology solutions.
+                  Today, my focus is on Microsoft 365 and Azure security —
+                  implementing Conditional Access, hardening identities with MFA,
+                  building Intune compliance frameworks, and leveraging Microsoft
+                  Defender and Sentinel for detection and response.
                 </p>
                 <p>
-                  In my free time, I study ethical hacking techniques, participate in cybersecurity challenges, and work
-                  on personal coding projects that combine my interests in development and security.
+                  By blending my background in software engineering with cloud
+                  administration, I create solutions that are not only secure but
+                  also automated, scalable, and aligned with real-world business
+                  needs.
                 </p>
               </div>
             </CardContent>
